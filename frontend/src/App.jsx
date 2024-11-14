@@ -1,10 +1,16 @@
 import './App.css'
+import React from 'react'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+
 
 function App() {
+ 
 
   return (
     <>
-      <h1 className='text-8xl'>App</h1>
+    <Header/>
+    <Footer/>
     </>
   )
 }
