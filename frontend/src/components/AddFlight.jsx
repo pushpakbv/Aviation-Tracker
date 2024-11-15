@@ -41,7 +41,8 @@ function AddFlight({ onAddFlight }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="bg-custom-light-blue">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-6 bg-custom-inner-blue shadow-lg rounded-lg">
       <h2 className="text-2xl font-bold mb-6 text-center">Add Flight</h2>
       <div className="mb-4">
         <label className="block text-gray-700 font-medium mb-2">Flight ID:</label>
@@ -100,6 +101,7 @@ function AddFlight({ onAddFlight }) {
         Add Flight
       </button>
     </form>
+    </div>
   );
 }
 

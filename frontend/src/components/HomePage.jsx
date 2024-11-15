@@ -41,12 +41,17 @@ function HomePage() {
 
   return (
     // <Router>
-      <div className="max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+    <div className="bg-custom-light-blue">
+      <div className="max-w-4xl min-h-96 mx-auto p-6 bg-custom-inner-blue rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold text-center mb-6">Flight Management</h1>
         <nav className="flex justify-center space-x-4 mb-6">
-          <Link to="/" className="text-blue-500 hover:underline">Flight List</Link>
-          <span>|</span>
-          <Link to="/add-flight" className="text-blue-500 hover:underline">Add Flight</Link>
+          
+          {/* <Link to="/add-flight" className="text-blue-500 hover:underline">Add Flight</Link> */}
+          <Link to={`/add-flight`}>
+          <button type="submit"
+          className="w-28 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >Add Flight</button>
+          </Link>
         </nav>
 
         <Routes>
@@ -54,6 +59,7 @@ function HomePage() {
           <Route path="/add-flight" element={<AddFlight onAddFlight={handleAddFlight} />} />
           <Route path="/edit-flight/:id" element={<EditFlight flights={flights} onUpdateFlight={handleUpdateFlight} />} />
         </Routes>
+      </div >
       </div>
     // </Router>
   );
